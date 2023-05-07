@@ -1,0 +1,190 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 320px;
+  min-height: 437px;
+  border: 1px solid #dedede;
+  box-sizing: border-box;
+
+  &.hidden {
+    min-height: 526px;
+  }
+
+  .background {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 212px;
+
+    .image {
+      position: absolute;
+      top: 54px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: auto;
+      height: 174px;
+    }
+
+    .type {
+      position: absolute;
+      top: 16px;
+      left: -18px;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 0 20px;
+    }
+
+    .typeRed {
+      background: #f07266;
+    }
+
+    .typeYellow {
+      background: #f19653;
+    }
+
+    .typePurple {
+      background: #b77cb8;
+    }
+
+    .typeGreen {
+      background: #9fae5d;
+    }
+
+    .date {
+      font-size: 16px;
+      font-weight: 400;
+      color: #dedede;
+      margin-top: 15px;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    color: #000000;
+
+    .title {
+      padding: 17px 18px 10px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .place {
+      display: flex;
+      align-items: center;
+      padding: 0 18px;
+      font-size: 14px;
+      font-weight: 400;
+      color: #9c9c9c;
+
+      .placeIcon {
+        margin-right: 7px;
+      }
+    }
+
+    .summary {
+      padding: 10px 18px;
+      font-size: 16px;
+      font-weight: 300;
+
+      .seeMore {
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: underline;
+      }
+    }
+
+    .hidden {
+      overflow: hidden !important;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 17px 19px;
+
+    .buyTicket {
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+      padding: 15px 47px;
+      background: #ff0d87;
+    }
+
+    .addCalendar {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 400;
+      color: #000000;
+    }
+  }
+}
+
+.card:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+}
+
+@media screen and (min-width: 375px) {
+  .card {
+    width: 344px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    flex-direction: row;
+    min-width: 1064px;
+    min-height: 204px;
+
+    &.hidden {
+      min-height: 204px;
+    }
+
+    .background {
+      width: 360px;
+      height: 204px;
+      justify-content: flex-start;
+      align-items: center;
+
+      .date {
+        width: 50px;
+        text-align: center;
+        margin-left: 30px;
+      }
+
+      .image {
+        top: 16px;
+        left: 108px;
+        transform: translate(0, 0);
+        width: 308px;
+        height: 172px;
+      }
+    }
+
+    .content {
+      max-width: 416px;
+      margin-left: 100px;
+      justify-content: center;
+
+      .summary {
+        height: 87px;
+      }
+    }
+
+    .buttons {
+      width: 186px;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 10px;
+    }
+  }
+}

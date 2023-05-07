@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+
+  .exclude {
+    display: none;
+  }
+
+  .title {
+    margin-top: 74px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .header {
+    .exclude {
+      display: block;
+      margin-top: 37px;
+    }
+  }
+}

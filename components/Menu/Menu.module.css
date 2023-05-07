@@ -1,0 +1,84 @@
+.menu {
+  .menuBar {
+    display: flex;
+    column-gap: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 52px;
+    width: 100vw;
+    overflow-x: scroll;
+
+    .menuItem {
+      padding: 0 0 16px 0;
+      font-size: 16px;
+      font-weight: 400;
+      color: #000000;
+      border-bottom: 4px solid #ffffff;
+
+      &.active {
+        font-weight: 700;
+        color: #ff0d87;
+        border-bottom: 4px solid #ff0d87;
+      }
+    }
+  }
+
+  .menuBar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navBar {
+    display: flex;
+    justify-content: space-between;
+    background: #f5f5f5;
+    padding: 13px 17px;
+    width: 100%;
+    color: #000000;
+    width: 100%;
+
+    .left {
+      display: flex;
+    }
+
+    .icon {
+      margin-right: 13px;
+    }
+
+    .button {
+      padding: 0;
+      color: #000000;
+    }
+
+    .filters,
+    .seeAtCalendar {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+}
+
+@media screen and (min-width: 512px) {
+  .menu {
+    .menuBar {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .menu {
+    .navBar {
+      padding: 13px 33px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu {
+    .navBar {
+      padding: 13px 83px;
+    }
+  }
+}
